@@ -1,0 +1,66 @@
+\documentclass{article}
+\usepackage{hyperref}
+\usepackage[type={CC}, modifier={zero}, version={1.0}]{doclicense}
+\usepackage{amsmath}
+%\usepackage[bb = boondox]{mathalpha}
+
+\title{Tensor Products, Exterior Products, and Geometric Algebras Aren't Trivial}
+\author{Jacob Bourbaki}
+
+
+\begin{document}
+\maketitle
+\doclicenseThis
+\begin{abstract}
+Tensor, exterior, and geometric algebras can be nicely defined in terms
+of free algebras with relations.  However, this begs the question of whether, once
+all of the indentifications have been made, what elements remain distinct from zero.
+This note is a comment on how to check that the identifications don't identify more
+that one wanted.  There is also a comment on understanding the determinant.  There is
+no claim to originality, although no references seem to be immediately available.
+\end{abstract}
+
+\section{Introduction}
+It is well known that tensort product, exterior products, and geometric products
+can be defined in terms of generators and relations.  However, such definitions
+leave open the \emph{a priori} possibility that the algebra so defined is degenerate
+due to relationships which are not obvious.  For example, if one considers
+the groups $\mathbf{Z}/2\mathbf{Z}$ and $\mathbf{Z}/3\mathbf{Z}$ as 
+$\mathbf{Z}$--modules, then
+\[
+  \mathbf{Z}/2\mathbf{Z}  \otimes_{\mathbf{Z}} \mathbf{Z}/3\mathbf{Z}  = 0,
+\]
+that is, all of the elements are identically equal to zero, as all elements
+of $\mathbf{Z}/2\mathbf{Z}$ are divisible by $3=1$~(mod~2), but when the 3~moves
+accross the $\otimes_{\mathbf{Z}}$, it becomes zero mod 3.  Thus the only 
+element of the tensor product is zero.  Fortunately, this doesn't have for 
+fields like the reals, $\mathbf{R}$.  The purpose of this note is to make this
+obvious.
+
+\section{Tensor Algebra}
+For a vector space $V$ over a field $\mathbf{F}$, let $W=V^*$ be the dual space.
+Now, for each integer $n>0$, let $X^n$ the vector space whose elements are
+lists of $n$ vectors, so $\left[w_1, w_2, \ldots w_n\right]$, $w_i \in W$, with addition
+and multiplication defined component--wise.  Let $X^0 = \mathbf{F}$, and let
+\begin{equation}
+  \mathbf{X}  = \bigoplus_{i=0}^\infty X^i.
+\end{equation}
+Then $\mathbf{X}$ is a vector space of $\mathbf{F}$, and we can consider the alegbra of
+all $\mathbf{F}$--linear operators from $\mathbf{X}$ to itself, \emph{i.e.}, 
+$\text{Hom}(\mathbf{X}, \mathbf{X})$.
+Given any $v \in V$, one can associate a linear operator $\hat{v}$ defined by
+\begin{align}
+  \hat{v}(x) & = 0 & x \in \mathbf{F} \\
+  \hat{v}\left(\left[ w_1, w_2, \ldots, w_n\right]\right) 
+      &= \hat{v}(w_1) \left(\left[ w_2, \ldots, w_n\right]\right)  &
+           \left[ w_1, w_2, \ldots, w_n\right] \in X^n
+\end{align}
+Thus each $v\in V$ induces a linear map, and this can be clearly extended to $V \times V$ is
+a manner which is probably balanced, and for any basis of $V$, the ordered pairs of
+vectors give a basis for $V\otimes V$, \emph{etc}. (Maybe a bit more should be said\ldots.)
+
+\section{Exterior Product}
+
+
+
+\end{document}
